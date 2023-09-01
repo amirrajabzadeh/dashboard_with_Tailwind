@@ -2,6 +2,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import { Slidebar } from "./components/Slidebar";
 import Dashboardview from "./components/Dashboardview";
+import { Outlet } from "react-router-dom";
 
 function App() {
   return (
@@ -11,6 +12,9 @@ function App() {
       </div>
       <div className="basis-[88%] border">
         <Dashboardview />
+        <div>
+          <Outlet></Outlet>
+        </div>
       </div>
     </div>
   );

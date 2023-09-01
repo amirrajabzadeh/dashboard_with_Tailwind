@@ -72,7 +72,7 @@ export const Slidebar = () => {
             </p>
           </div>
         </div>
-        <div className="flex items-center gap-[10px] ">
+        <div className="flex items-center gap-[10px] py-[15px] cursor-pointer">
           <FaRegCalendarAlt color="white" />
           <p className="tex-[14px] leading-[20px] font-normal text-white ">
             Tables
