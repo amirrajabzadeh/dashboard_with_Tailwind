@@ -11,6 +11,8 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import PieComponent from "./PieComponent";
+import { Progress } from "antd";
+import error from "../assets/images/find.png";
 
 const data = [
   {
@@ -161,6 +163,81 @@ const Main = () => {
 
           <div className="flex items-center justify-center">
             <PieComponent />
+          </div>
+        </div>
+      </div>
+
+      <div className="flex mt-[22px] w-full gap-[30px] ">
+        <div className="basis-[55%] border bg-white shadow-md cursor-pointer rounded-[4px]">
+          <div className="bg-[#f8f9fc] flex items-center justify-between py-[15px] px-[20px] border-b-[1px] border-[#ededed] mb-[20px] ">
+            <h2 className="text-[#4e73df] text-[16px] leading-[19px] font-bold ">
+              Earning Overview
+            </h2>
+            <FaEllipsisV color="gray" className="cursor-pointer" />
+          </div>
+
+          <div className="px-[25px] space-y-[15px] py-[15px] ">
+            <div>
+              <div>
+                <h2>Server Migration</h2>
+                <Progress percent={30} strokeColor="#E74A3B" />
+              </div>
+            </div>
+
+            <div>
+              <div>
+                <h2>Sales Tracking</h2>
+                <Progress percent={50} status="active" strokeColor="#f6c23e" />
+              </div>
+            </div>
+
+            <div>
+              <div>
+                <h2>Customer Database</h2>
+                <Progress percent={70} status="active" strokeColor="#4e73df" />
+              </div>
+            </div>
+
+            <div>
+              <div>
+                <h2>Payout Details</h2>
+                <Progress
+                  percent={7100}
+                  status="active"
+                  strokeColor="#36b9cc"
+                />
+              </div>
+            </div>
+
+            <div>
+              <div>
+                <h2>Account Setup</h2>
+                <Progress
+                  percent={50}
+                  status="exception"
+                  strokeColor="#1cc88a"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="basis-[45%] border bg-white shadow-md cursor-pointer rounded-[4px]">
+          <div>
+            <div className="bg-[#f8f9fc] flex items-center justify-between py-[15px] px-[20px] border-b-[1px] border-[#ededed] mb-[20px] ">
+              <h2 className="text-[#4e73df] text-[16px] leading-[19px] font-bold ">
+                Resource
+              </h2>
+              <FaEllipsisV color="gray" className="cursor-pointer" />
+            </div>
+          </div>
+          <div className="pl-[35px] flex items-center justify-center h-[100%] ">
+            <div>
+              <img className="w-[80px] h-[80px] " src={error} alt="" />
+              <p className="mt-[15px] font-semibold text-gray-500 ">
+                No data available
+              </p>
+            </div>
           </div>
         </div>
       </div>
