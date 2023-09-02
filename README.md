@@ -2,6 +2,10 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Screenshot
+
+<img src='./src/assets/images/screenshot.png' width='100%'>
+
 ## Available Scripts
 
 In the project directory, you can run:
