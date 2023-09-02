@@ -1,5 +1,5 @@
 import React from "react";
-import { FaRegCalendarMinus } from "react-icons/fa";
+import { FaEllipsisV, FaRegCalendarMinus } from "react-icons/fa";
 import {
   LineChart,
   Line,
@@ -10,6 +10,7 @@ import {
   Legend,
   ResponsiveContainer,
 } from "recharts";
+import PieComponent from "./PieComponent";
 
 const data = [
   {
@@ -115,6 +116,52 @@ const Main = () => {
             </h1>
           </div>
           <FaRegCalendarMinus fontSize={28} />
+        </div>
+      </div>
+
+      <div className="flex mt-[22px] w-full gap-[30px] ">
+        <div className="basis-[70%] border bg-white shadow-md cursor-pointer rounded-[4px] ">
+          <div className="bg-[#f8f9fc] flex items-center justify-between py-[15px] px-[20px] border-b-[1px] border-[#ededed] mb-[20px] ">
+            <h2>Earning Overview</h2>
+            <FaEllipsisV color="gray" className="cursor-pointer" />
+          </div>
+          <div>
+            <LineChart
+              width={1150}
+              height={500}
+              data={data}
+              margin={{
+                top: 5,
+                right: 30,
+                left: 20,
+                bottom: 5,
+              }}
+            >
+              <CartesianGrid strokeDasharray="3 3" />
+              <XAxis dataKey="name" />
+              <YAxis />
+              <Tooltip />
+              <Legend />
+              <Line
+                type="monotone"
+                dataKey="pv"
+                stroke="#8884d8"
+                activeDot={{ r: 8 }}
+              />
+              <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
+            </LineChart>
+          </div>
+        </div>
+
+        <div className="basis-[30%] bg-white shadow-md cursor-pointer rounded-[4px]">
+          <div className="bg-[#f8f9fc] flex items-center justify-between py-[15px] px-[20px] border-b-[1px] border-[#ededed] mb-[20px] ">
+            <h2>Revenue Resources</h2>
+            <FaEllipsisV color="gray" className="cursor-pointer" />
+          </div>
+
+          <div className="flex items-center justify-center">
+            <PieComponent />
+          </div>
         </div>
       </div>
     </div>
